@@ -10,13 +10,13 @@
     NSString* action = [command.arguments objectAtIndex:0];
 	[DCore al:action];
 	NSString* str = [command.arguments objectAtIndex:1];
-	if(action=="al"){ 
+	if([action isEqualToString:@"al"]){ 
 	  [DCore al:str];
-	}else if(action=="loginsave"){ 
+	}else if([action isEqualToString:@"loginsave"]){ 
 	  NSUserDefaults *standardDefaults = [NSUserDefaults standardUserDefaults];
        [standardDefaults setObject:str forKey:loginToken];
        [standardDefaults synchronize];
-	}else if(action=="getLoginTokengetLoginToken"){ 
+	}else if([action isEqualToString:@"getLoginToken"]){ 
 	  NSUserDefaults *standardDefaults = [NSUserDefaults standardUserDefaults];
       NSString *token = [standardDefaults stringForKey:loginToken];
 	  CDVPluginResult *result;
