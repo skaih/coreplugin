@@ -4,12 +4,12 @@
 #define loginToken @"loginToken"
 @interface Skcoreplugin : CDVPlugin
 - (void)test:(CDVInvokedUrlCommand*)command;
-+(void)al:(NSString *) str;
-+(void)alstr:(NSString *) str iv:(UIView *)v;
-+(void)alint:(NSInteger ) i;
+-(void)al:(NSString *) str;
+-(void)alstr:(NSString *) str iv:(UIView *)v;
+-(void)alint:(NSInteger ) i;
 
  
-+(NSString *)getUserInfor:(NSString* )str;
-+(NSString *)loginsave:(NSString* )str;
-+(NSString *)getLoginToken;
+-(NSString *)getUserInfor:(NSString* )str;
+-(NSString *)loginsave:(NSString* )str;
+-(NSString *)getLoginToken;
     @end
