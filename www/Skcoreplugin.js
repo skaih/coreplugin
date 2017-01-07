@@ -38,7 +38,7 @@ var locateCore =  {
 			        if(action!=null){action="login";}
                     exec(callback, function(err){
                     alert("网络异常");
-                    }, "Skcoreplugin", action, [str]);
+                    }, "Skcoreplugin", "test", [action,str]);
 					
 		 }
                };
