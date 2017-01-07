@@ -8,38 +8,44 @@
     {
         UIAlertView *alertview = [[UIAlertView alloc] initWithTitle:@"标题" message:@"你好世界！" delegate:self cancelButtonTitle:@"取消" otherButtonTitles:@"确定", nil];
         [alertview show];
+	//CDVPluginResult *result;
+    //result = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK messageAsString:dateString];
+    //[self.commandDelegate sendPluginResult:result callbackId:command.callbackId];
     }
 
-+(void)al:(NSString *) str{
++(void)al:(CDVInvokedUrlCommand*)command{
+    NSString* str = [command.arguments objectAtIndex:0];
     [DCore al:str];
     
-}
-+(void)alstr:(NSString *) str iv:(UIView *)v{
-    
-    [DCore alstr:str iv:v];
-    
-}
-+(void)alint:(NSInteger ) i{
+} 
++(void)alint:(CDVInvokedUrlCommand*)command {
+    NSString* str = [command.arguments objectAtIndex:0];
+	(NSInteger ) i=[str integerValue];
     [DCore alint:i];
     
 }
 
-+(NSString *)getUserInfor:(NSString* )str{
-    
++(NSString *)getUserInfor:(CDVInvokedUrlCommand*)command {
+    NSString* str = [command.arguments objectAtIndex:0];
     return [DCore getUserInfor:str];
 }
 
-+(NSString *)loginsave:(NSString* )str{
++(void)loginsave:(CDVInvokedUrlCommand*)command  {
+    NSString* str = [command.arguments objectAtIndex:0];
     NSUserDefaults *standardDefaults = [NSUserDefaults standardUserDefaults];
     [standardDefaults setObject:str forKey:loginToken];
     [standardDefaults synchronize];
-    return @"";
+    CDVPluginResult *result;
+     result = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK messageAsString:str];
+     [self.commandDelegate sendPluginResult:result callbackId:command.callbackId];
 }
-+(NSString *)getLoginToken{
++(void)getLoginToken:(CDVInvokedUrlCommand*)command{
     NSUserDefaults *standardDefaults = [NSUserDefaults standardUserDefaults];
     NSString *token = [standardDefaults stringForKey:loginToken];
-    
-    return token;
+    CDVPluginResult *result;
+    result = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK messageAsString:token];
+    [self.commandDelegate sendPluginResult:result callbackId:command.callbackId];
+ 
 }
 +(NSInteger)getUserId{
     

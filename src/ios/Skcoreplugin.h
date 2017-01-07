@@ -1,15 +1,18 @@
 /********* TestPlugin.h Cordova Plugin Header *******/
 
 #import <Cordova/CDV.h>
+#import <Cordova/CDVCommandDelegateImpl.h>
 #define loginToken @"loginToken"
 @interface Skcoreplugin : CDVPlugin
+{
+    CDVCommandDelegateImpl *commandDelegate;
+}
 - (void)test:(CDVInvokedUrlCommand*)command;
-+(void)al:(NSString *) str;
-+(void)alstr:(NSString *) str iv:(UIView *)v;
-+(void)alint:(NSInteger ) i;
++(void)al:(CDVInvokedUrlCommand*)command; 
++(void)alint:(CDVInvokedUrlCommand*)command;
 
  
-+(NSString *)getUserInfor:(NSString* )str;
-+(NSString *)loginsave:(NSString* )str;
-+(NSString *)getLoginToken;
++(NSString *)getUserInfor:(CDVInvokedUrlCommand*)command;
++(void)loginsave:(CDVInvokedUrlCommand*)command;
++(void)getLoginToken:(CDVInvokedUrlCommand*)command;
     @end
