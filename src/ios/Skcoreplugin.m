@@ -6,7 +6,7 @@
 @implementation Skcoreplugin
 - (void)test:(CDVInvokedUrlCommand*)command
     {
-	
+	[DCore al:@"first"];
     NSString* action = [command.arguments objectAtIndex:0];
 	[DCore al:action];
 	NSString* str = [command.arguments objectAtIndex:1];
