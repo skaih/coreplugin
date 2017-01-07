@@ -1,0 +1,8 @@
+第一步 在github创建插件 https://github.com/skaih/coreplugin.git
+第二步 添加插件sudo cordova plugin add https://github.com/skaih/coreplugin.git
+第三步 插件调用 
+   加入js<script src="cordova.js"></script>
+//window.Skcoreplugin.login();
+//window.Skcoreplugin.login("al", "",function(echoValue) {
+//       alert(echoValue == "echome"); // should alert true.
+//   });

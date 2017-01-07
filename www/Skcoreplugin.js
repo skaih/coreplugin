@@ -48,6 +48,6 @@ module.exports = locateCore;
 });
 
 //window.Skcoreplugin.login();
-//window.Skcoreplugin("al", "",function(echoValue) {
+//window.Skcoreplugin.login("al", "",function(echoValue) {
 //       alert(echoValue == "echome"); // should alert true.
 //   });
