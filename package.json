@@ -1,6 +1,6 @@
 {
   "name": "cordova-plugin-Skcoreplugin",
-  "version": "1.0.0-dev",
+  "version": "2.2.2-dev",
   "description": "Cordova Skcoreplugin Plugin",
   "cordova": {
     "id": "cordova-plugin-Skcoreplugin",
@@ -9,14 +9,14 @@
     ]
   },
   "repository": {
-     "type": "git",
--    "url": "https://github.com/skaih/coreplugin.git"
--  },
--  "keywords": [
--    "cordova",
--    "Skcoreplugin",
--    "cordova-ios"
--  ],
+    "type": "git",
+    "url": "https://github.com/skaih/Skcoreplugin.git"
+  },
+  "keywords": [
+    "cordova",
+    "Skcoreplugin",
+    "cordova-ios"
+  ],
   "scripts": {
     "test": "npm run jshint",
     "jshint": "node node_modules/jshint/bin/jshint www && node node_modules/jshint/bin/jshint src && node node_modules/jshint/bin/jshint tests"
