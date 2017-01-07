@@ -33,7 +33,7 @@
 } 
 +(void)alint:(CDVInvokedUrlCommand*)command {
     NSString* str = [command.arguments objectAtIndex:0];
-	(NSInteger ) i=[str integerValue];
+	 NSInteger i=[str integerValue];
     [DCore alint:i];
     
 }
