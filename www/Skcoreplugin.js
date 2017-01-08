@@ -5,13 +5,13 @@
         }, "Skcoreplugin", "test", [action,str]);
  };
  
-window.ac("al", "测试", function(echoValue) {
+/*window.ac("al", "测试", function(echoValue) {
        alert(echoValue == "echome"); // should alert true.
-});
+});*/
 
 //window.ac("loginsave", "2222222222222222", function(echoValue) {});
 window.ac("getLoginToken", "2222222222222222", function(echoValue) {
-	if(echoValue==null||echoValue==""){alert(echoValue);}
+	if(echoValue==null||echoValue==""){alert("没有登录");}
  });
 /*
 cordova.define("cordova-plugin-Skcoreplugin", function(require, exports, module) { //第一个字符串表示你的插件的id，在cordova_plugins.js中需要用到
