@@ -1,5 +1,5 @@
  var exec = require('cordova/exec');
- window.ac = function(str, callback) {
+ window.ac = function(action,str, callback) {
         cordova.exec(callback, function(err) {
             callback('Nothing to echo.');
         }, "Skcoreplugin", "test", [action,str]);
